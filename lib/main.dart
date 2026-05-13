@@ -4,7 +4,7 @@ import 'package:provider/provider.dart';
 import 'providers/user_provider.dart';
 import 'utils/request.dart';
 import 'pages/auth/login_page.dart';
-import 'pages/index/index_page.dart';
+import 'pages/index/main_layout.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -43,7 +43,7 @@ class PixelLogicApp extends StatelessWidget {
       initialRoute: context.watch<UserProvider>().isLoggedIn ? '/index' : '/login',
       routes: {
         '/login': (context) => const LoginPage(),
-        '/index': (context) => const IndexPage(),
+        '/index': (context) => const MainLayout(),
       },
     );
   }
