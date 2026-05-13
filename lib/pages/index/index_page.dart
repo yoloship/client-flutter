@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../order/create_page.dart';
 
 class IndexPage extends StatelessWidget {
   const IndexPage({super.key});
@@ -13,7 +14,10 @@ class IndexPage extends StatelessWidget {
             icon: const Icon(Icons.add),
             tooltip: '新建出货单',
             onPressed: () {
-              // TODO: 跳转到订单创建页
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const CreateOrderPage()),
+              );
             },
           ),
         ],
