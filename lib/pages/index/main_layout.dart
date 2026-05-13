@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../order/create_page.dart';
+import '../order/list_page.dart';
 import 'assets_page.dart';
 import '../profile/profile_page.dart';
 
@@ -15,7 +16,7 @@ class _MainLayoutState extends State<MainLayout> {
 
   final List<Widget> _pages = [
     const AssetsPage(),
-    const Center(child: Text('订单列表开发中...')),
+    const OrderListPage(),
     const ProfilePage(),
   ];
 

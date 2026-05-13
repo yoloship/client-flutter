@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../providers/user_provider.dart';
+import '../production/record_page.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});
@@ -49,6 +50,18 @@ class ProfilePage extends StatelessWidget {
             ),
             child: Column(
               children: [
+                ListTile(
+                  leading: const Icon(Icons.assignment_add),
+                  title: const Text('产量登记表'),
+                  trailing: const Icon(Icons.chevron_right),
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const ProductionRecordPage()),
+                    );
+                  },
+                ),
+                const Divider(height: 1),
                 ListTile(
                   leading: const Icon(Icons.settings),
                   title: const Text('系统设置'),
